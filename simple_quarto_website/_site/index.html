@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Shingai Nindi">
+
+<title>simple_quarto_website</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">simple_quarto_website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./about.ipynb" rel="" target="">
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-is-the-story-of-cristiano-ronaldo-the-greatest-footballer-ever" id="toc-this-is-the-story-of-cristiano-ronaldo-the-greatest-footballer-ever" class="nav-link active" data-scroll-target="#this-is-the-story-of-cristiano-ronaldo-the-greatest-footballer-ever">This is the story of Cristiano Ronaldo, the greatest footballer ever</a>
+  <ul class="collapse">
+  <li><a href="#accolades" id="toc-accolades" class="nav-link" data-scroll-target="#accolades">Accolades:</a>
+  <ul class="collapse">
+  <li><a href="#stats-per-team" id="toc-stats-per-team" class="nav-link" data-scroll-target="#stats-per-team">Stats Per Team</a></li>
+  </ul></li>
+  <li><a href="#ronaldos-top-10-champions-league-goals" id="toc-ronaldos-top-10-champions-league-goals" class="nav-link" data-scroll-target="#ronaldos-top-10-champions-league-goals">Ronaldo’s Top-10 Champions League Goals</a></li>
+  <li><a href="#here-are-the-columns" id="toc-here-are-the-columns" class="nav-link" data-scroll-target="#here-are-the-columns">Here are the columns</a>
+  <ul class="collapse">
+  <li><a href="#rest-of-the-assignments-requirements" id="toc-rest-of-the-assignments-requirements" class="nav-link" data-scroll-target="#rest-of-the-assignments-requirements">Rest of the assignments requirements</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">simple_quarto_website</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Shingai Nindi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="this-is-the-story-of-cristiano-ronaldo-the-greatest-footballer-ever" class="level1">
+<h1>This is the story of Cristiano Ronaldo, the greatest footballer ever</h1>
+<p>link to bio of Ronaldo <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" class="uri">https://en.wikipedia.org/wiki/Cristiano_Ronaldo</a>.</p>
+<p>Cristiano Ronaldo dos Santos Aveiro GOIH ComM; born 5 February 1985 is a Portuguese professional footballer who plays as a forward for and captains both Saudi Pro League club Al Nassr and the Portugal national team. Widely regarded as one of the greatest players of all time, Ronaldo has won five Ballon d’Or awards,[note 3] a record three UEFA Best Player in Europe, and four European Golden Shoes, the most by a European player. He has won 33 trophies in his career, including seven league titles, five UEFA Champions Leagues, the UEFA European Championship and the UEFA Nations League. Ronaldo holds the records for most appearances (183), goals (140) and assists (42) in the Champions League, goals in the European Championship (14), international goals (123) and international appearances (200). He is one of the few players to have made over 1,100 professional career appearances, and has scored over 800 official senior career goals for club and country, making him the highest goalscorer of all time.</p>
+<section id="accolades" class="level2">
+<h2 class="anchored" data-anchor-id="accolades">Accolades:</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Left Column</th>
+<th>Right Column</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Record Goals</td>
+<td>Most UCL Assists</td>
+</tr>
+<tr class="even">
+<td>Most Champions League Trophies</td>
+<td>Most Int’ Caps</td>
+</tr>
+<tr class="odd">
+<td>Most followed on social media</td>
+<td>5 Ballon D’or</td>
+</tr>
+<tr class="even">
+<td>Most games won</td>
+<td>2008 Treble</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ronaldo has the most weak foot goals and headed goals in history</li>
+<li>He has the most game tying / winning goals in football history</li>
+<li>He is the only player in history to win the PFA player of the year and young player of the year in the same season</li>
+</ul>
+<section id="stats-per-team" class="level3">
+<h3 class="anchored" data-anchor-id="stats-per-team">Stats Per Team</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Team and Years</th>
+<th>Appearances and Goals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sporting CP, 2002-03</td>
+<td>31 apps, 5 goals</td>
+</tr>
+<tr class="even">
+<td>Man United, 2003-09</td>
+<td>292 apps, 118 goals</td>
+</tr>
+<tr class="odd">
+<td>Real Madrid, 2009-18</td>
+<td>438 apps, 450 goals</td>
+</tr>
+<tr class="even">
+<td>Juventus, 2018-22</td>
+<td>134 apps, 101 goals</td>
+</tr>
+<tr class="odd">
+<td>Man United, 2021-23</td>
+<td>54 apps, 27 goals</td>
+</tr>
+<tr class="even">
+<td>Al Nassr, 2023-24</td>
+<td>30 apps, 26 goals</td>
+</tr>
+</tbody>
+</table>
+<p>Ronaldo is widely regarded as one of the two best players of his generation, alongside Lionel Messi. Winning his first Ballon d’Or in 2008 by a record-high vote count at age 23, over the next decade Ronaldo has often featured in debates concerning who is the greatest player in history. Acclaimed for his prolific and consistent goal-scoring, he is considered a decisive player who is also a game changer, especially in important and high-pressured situations<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>Arugably the greatest manager ever on the Ronaldo-Messi debate</p>
+<blockquote class="blockquote">
+<p>“People say who is the best player in the world? And plenty of people quite rightly say Messi - you can’t dispute that opinion, but Ronaldo could play for Millwall, Queens Park Rangers, Doncaster Rovers… anyone, and score a hat-trick in a game. I’m not sure Messi could do it. Ronaldo’s got two feet, he’s quick, great in the air, he’s brave - Messi’s brave, of course. I think Messi’s a Barcelona player.”</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/First.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Ronaldo with his first ballon d’or</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/Euros.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Ronaldo with his first international trophy</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="ronaldos-top-10-champions-league-goals" class="level2">
+<h2 class="anchored" data-anchor-id="ronaldos-top-10-champions-league-goals">Ronaldo’s Top-10 Champions League Goals</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/knAjYN1wIug?si=PGBrsUxabqCEuieK" width="700" height="415" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="here-are-the-columns" class="level2">
+<h2 class="anchored" data-anchor-id="here-are-the-columns">Here are the columns</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>On 10 September 2019, Ronaldo scored four goals in a 5–1 away win over Lithuania in a Euro 2020 qualifying match; in the process, he overtook Robbie Keane (23 goals) as the player with most goals in the UEFA European Championship qualifying, setting a new record with 25 goals. He also set a new record for scoring against the most national teams, 40, while also completing his eighth international hat-trick. On 14 October, he scored his 700th senior career goal for club and country from the penalty spot, in his 974th senior career appearance, a 2–1 away loss to Ukraine in a Euro 2020 qualifier. On 17 November, Ronaldo scored his 99th international goal in a 2–0 win over Luxembourg, leading Portugal to qualify for Euro 2020. On 8 September 2020, Ronaldo scored his 100th and 101st international goals in a 2–0 away win over Sweden in a 2020–21 UEFA Nations League match, becoming only the second male player ever to achieve this milestone (after Ali Daei of Iran) and the first in Europe. On 13 October, the FPF announced that Ronaldo tested positive for COVID-19 while being asymptomatic. By 30 October, Ronaldo had recovered.</p>
+</div><div class="column" style="width:50%;">
+<p>On 1 September, Ronaldo scored two headed goals, with his second coming seconds before the full-time whistle, in a 2–1 home win against the Republic of Ireland in a World Cup qualifier at the Estádio Algarve, which saw him pass Ali Daei to become the sole record holder by breaking the men’s international scoring record with his 110th and 111th international goals. On 9 October, he scored the opening goal in a 3–0 friendly win over Qatar at the Estádio Algarve; with his 181st international appearance, he also overtook Sergio Ramos’s record for the most international caps received by a European player. In the following match against Luxembourg on 12 October, also played at the Estádio Algarve, Ronaldo scored a hat-trick in a 5–0 win for Portugal, and became the first player to score 10 hat-tricks in men’s international football.</p>
+</div>
+</div>
+<section id="rest-of-the-assignments-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="rest-of-the-assignments-requirements">Rest of the assignments requirements</h3>
+<p>Inline equation: <span class="math inline">\(E=mc^2\)</span>.</p>
+<p><span class="math display">\[
+F(x) = \int_{a}^{b} f(x) \, dx
+\]</span></p>
+<div class="cell" data-fig-width="6.5">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Hard edge] --&gt; B(Round edge)
+  B --&gt; C{Decision}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>Here is the citation <span class="citation" data-cites="ekblom1986applied">Ekblom (<a href="#ref-ekblom1986applied" role="doc-biblioref">1986</a>)</span></p>
+
+
+
+</section>
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-ekblom1986applied" class="csl-entry" role="listitem">
+Ekblom, Björn. 1986. <span>“Applied Physiology of Soccer.”</span> <em>Sports Medicine</em> 3: 50–60.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Ronaldo has the most game winning goals in history<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
