@@ -1,5 +1,5 @@
 ---
-title: "simple_quarto_website"
+title: "Cristiano Ronaldo"
 author: "Shingai Nindi"
 bibliography: references.bib
 output:
@@ -9,7 +9,7 @@ output:
     toc-title: Contents
 ---
 
-# This is the story of Cristiano Ronaldo, the greatest footballer ever 
+# This is the story of Cristiano Ronaldo, the greatest footballer ever! 
 
 
 link to bio of Ronaldo <https://en.wikipedia.org/wiki/Cristiano_Ronaldo>.

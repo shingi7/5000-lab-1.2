@@ -9,12 +9,11 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: ../slides/slides.qmd
-        text: Slides
+
 
 format:
   html:
-    theme: cosmo
+    theme: sandstone
     css: styles.css
     toc: true
 
