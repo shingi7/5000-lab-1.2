@@ -1,0 +1,27 @@
+---
+title: Habits
+author: Shingi Nindi
+format: revealjs
+theme: dark
+bibliography: ../references.bib
+jupyter: python3
+---
+
+```{python}
+#| echo: true
+#| code-fold: true
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate some sample data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Create a plot
+plt.plot(x, y)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Sample Plot')
+plt.show()
+```
+
